@@ -6,15 +6,15 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
 /**
- * Created by lukuanpc on 2017/9/24.
+ * Created by kevin on 2017/9/24.
  */
 @Controller
 public class helloJSPController {
 
     @RequestMapping(value="/indexjsp",method = RequestMethod.GET)
     public ModelAndView indexView(){
-        ModelAndView mv=new ModelAndView("/index");
-        mv.addObject("hi","hello World JSP");
+        ModelAndView mv=new ModelAndView("/indexjsp");
+        mv.addObject("hijsp","hello World JSP");
         return mv;
     }
 

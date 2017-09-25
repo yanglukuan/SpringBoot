@@ -12,7 +12,7 @@ import java.util.List;
  * Created by lukuanpc on 2017/9/24.
  */
 @SpringBootApplication //自动扫描
-public class Application extends SpringBootServletInitializer {
+public class ApplicationStar extends SpringBootServletInitializer {
 
     /**
      * Configure your application when it’s launched by the servlet container
@@ -20,21 +20,14 @@ public class Application extends SpringBootServletInitializer {
      */
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(Application.class);
+        return application.sources(ApplicationStar.class);
 
     }
 
 
     //内置tomcat运行时由此启动
     public static void  main(String[] args){
-
-//        List<String>  ss=new ArrayList<String>();
-//
-//        ss.add("23");
-//
-//        ss.stream().forEach(m->System.out.print(m));
-
-        SpringApplication.run(Application.class,args);
+        SpringApplication.run(ApplicationStar.class,args);
     }
 
 }
