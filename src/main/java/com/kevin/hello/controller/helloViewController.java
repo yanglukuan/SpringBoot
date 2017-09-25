@@ -13,7 +13,7 @@ public class helloViewController {
 
     @RequestMapping(value="/index",method = RequestMethod.GET)
     public ModelAndView indexView(){
-        ModelAndView mv=new ModelAndView("/index");
+        ModelAndView mv=new ModelAndView("index");
         mv.addObject("hi","hello World");
         return mv;
     }
